@@ -131,6 +131,23 @@ const haatSlider = new Swiper('.haat-slider', {
     }
 });
 
+const joinElement = document.getElementById('join');
+const joinMenu = document.querySelector('.join-menu');
+joinElement.addEventListener('mouseenter', () => {
+  joinMenu.classList.add('open');
+});
+
+joinElement.addEventListener('mouseleave', (e) => {
+  if (!joinMenu.contains(e.relatedTarget)) {
+    joinMenu.classList.remove('open');
+  }
+});
+
+joinMenu.addEventListener('mouseleave', (e) => {
+  if (!joinElement.contains(e.relatedTarget)) {
+    joinMenu.classList.remove('open');
+  }
+});
 
 });
 
