@@ -22,3 +22,8 @@ body{
     font-family: "Poppins", sans-serif;
     color: #2C2C2C;
 }
+@media (min-width: 1300px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1300px;
+    }
+}
