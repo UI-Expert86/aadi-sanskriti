@@ -1,0 +1,39 @@
+.welcome-section {
+    .moving-banner {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 40px;
+        
+        .banner-content {
+            display: flex;
+            width: max-content;
+            animation: moveLeft 15s linear infinite;
+            background-color: #6b3c00;
+            img {
+                height: 100px;
+                width: auto;
+            }
+
+            // Create copies of the image for seamless loop
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                height: 100px;
+                width: 1920px; // Adjust based on your image width
+                background-image: url('../assets/images/bg_art1.png'); 
+                background-repeat: repeat-x;
+                background-size: auto 100%;
+            }
+        }
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.33%);
+    }
+}

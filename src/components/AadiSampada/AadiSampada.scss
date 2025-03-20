@@ -1,0 +1,219 @@
+@use "sass:color";
+.top_wrapper{
+    display: flex;
+    padding:50px 0;
+
+    @media (max-width:1024px){
+        flex-direction: column;
+        padding: 20px 0;
+        padding-top:0
+    }
+.main_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 860px;
+    padding: 10px;
+    padding-top:80px;
+    @media (max-width:1024px){
+        width:100%;
+        padding-top:20px;
+    }
+    .left-image {
+      width: 100%;
+      max-width: 498px;
+      border-radius: 16px;
+      @media (max-width:1024px){
+        max-width:100%;
+    }
+    }
+  
+    .right-column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      img {
+        width: 100%;
+        max-width: 302px;
+        height: auto;
+      }
+  
+      .top-image {
+        max-height: 369px;
+        border-radius: 16px;
+      }
+  
+      .bottom-image {
+        max-height: 268px;
+        border-radius: 16px;
+      }
+    }
+    @media (max-width:1024px){
+        flex-direction: column;
+        align-items: center;
+    }
+    
+  }
+  .content-section {
+    flex: 1;
+    max-width: 392px;
+    @media (max-width:1024px){
+        max-width:100%;
+    }
+    .title {
+        color: #D92A2A;
+        font-size: 40px;
+        margin-bottom: 25px;
+        font-weight: 400;
+        position: relative;
+        padding-bottom: 15px;
+        @media (max-width:1024px){
+          font-size: 28px;
+          padding-top:20px
+      }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100px;
+            height: 2px;
+            background-color: #D92A2A;
+        }
+    }
+
+    p {
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .learn-more {
+        display: inline-block;
+        padding: 12px 30px;
+        background: #D92A2A;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: -5px;
+        transition: background 0.3s;
+
+        &:hover {
+            background: color.adjust(#D92A2A, $lightness: -10%);
+        }
+    }
+}
+}
+  #left {
+    position: relative;
+    width: 100%;
+    max-width: 498px;
+    overflow: hidden;
+    @media (max-width:1024px){
+       height:500px;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out;
+    }
+  
+    @keyframes rotateFadeEffect {
+      0%, 45% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        opacity: 0.8;
+        transform: rotate(10deg) scale(1.05);
+      }
+      60%, 100% {
+        opacity: 0;
+        transform: rotate(20deg) scale(1.1);
+      }
+    }
+  
+    img:last-child {
+      animation: rotateFadeEffect 8s infinite alternate;
+    }
+  }
+
+  #right-top {
+    position: relative;
+    width: 100%;
+    width: 302px;
+    height: 369px;
+    overflow: hidden;
+  
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out;
+    }
+  
+    @keyframes rotateFadeEffect {
+      0%, 45% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        opacity: 0.8;
+        transform: rotate(10deg) scale(1.05);
+      }
+      60%, 100% {
+        opacity: 0;
+        transform: rotate(20deg) scale(1.1);
+      }
+    }
+  
+    img:last-child {
+      animation: rotateFadeEffect 10s infinite alternate;
+    }
+  }
+  #right-bottom {
+    position: relative;
+    width: 100%;
+    width: 302px;
+    height: 268px;
+    overflow: hidden;
+  
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 2.5s ease-in-out, transform 2.5s ease-in-out;
+    }
+  
+    @keyframes rotateFadeEffect {
+      0%, 45% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+      }
+      50% {
+        opacity: 0.8;
+        transform: rotate(10deg) scale(1.05);
+      }
+      60%, 100% {
+        opacity: 0;
+        transform: rotate(20deg) scale(1.1);
+      }
+    }
+  
+    img:last-child {
+      animation: rotateFadeEffect 11s infinite alternate;
+    }
+  }
+
+  

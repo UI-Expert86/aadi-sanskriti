@@ -1,0 +1,24 @@
+// Use @use instead of @import for modern Sass
+@use '../components/Header/Header';
+@use '../components/Banner/Banner.scss';
+@use '../components/WelcomeSection/WelcomeSection.scss';
+@use '../components/AadiVishwavidyalaya/AadiVishwavidyalaya.scss';
+@use '../components/AadiSampada/AadiSampada.scss';
+@use '../components/AadiHaat/AadiHaat.scss';
+@use '../components/TreeLayout/TreeLayout.scss';
+@use '../components/Footer/Footer';
+
+// Other global styles
+@use 'bootstrap/dist/css/bootstrap.min.css';
+@use 'swiper/css';
+@use 'swiper/css/navigation';
+@use 'swiper/css/pagination';
+*{
+    margin: 0;
+    padding : 0;
+}
+body{
+    overflow-x: hidden;
+    font-family: "Poppins", sans-serif;
+    color: #2C2C2C;
+}
