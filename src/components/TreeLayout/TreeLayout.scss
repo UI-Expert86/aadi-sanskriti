@@ -157,6 +157,10 @@ position: relative;
                 width: 99px;
                 height: 100px;
                 animation: rotateEarth 10s infinite linear;
+                @media (max-width:767px){
+                  width: 77px;
+    height: 77px;
+                }
             }
           }
       }

@@ -16,6 +16,10 @@
     top: -77px;
     width: 100px;
     z-index: 1;
+   
+    }
+    @media (max-width:767px){
+        right:14px!important;
     }
     }
 .bg-overlay{
